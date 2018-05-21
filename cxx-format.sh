@@ -11,7 +11,7 @@ UseTab: Never, \
 AccessModifierOffset: -2, \
 AlignAfterOpenBracket: DontAlign, \
 AlignConsecutiveAssignments: false, \
-AlignConsecutiveDeclarations: false, \
+AlignConsecutiveDeclarations: true, \
 AlignEscapedNewlines: Left, \
 AlignOperands: false, \
 AlignTrailingComments: true, \
