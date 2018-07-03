@@ -11,7 +11,7 @@ UseTab: Never, \
 AccessModifierOffset: -2, \
 AlignAfterOpenBracket: DontAlign, \
 AlignConsecutiveAssignments: false, \
-AlignConsecutiveDeclarations: true, \
+AlignConsecutiveDeclarations: false, \
 AlignEscapedNewlines: Left, \
 AlignOperands: false, \
 AlignTrailingComments: true, \
@@ -22,7 +22,7 @@ BinPackParameters: true, \
 \
 AllowShortBlocksOnASingleLine: true, \
 AllowShortCaseLabelsOnASingleLine: false, \
-AllowShortFunctionsOnASingleLine: All, \
+AllowShortFunctionsOnASingleLine: Empty, \
 AllowShortIfStatementsOnASingleLine: false, \
 AllowShortLoopsOnASingleLine: false, \
 \
@@ -53,7 +53,7 @@ BreakBeforeTernaryOperators: true, \
 BreakConstructorInitializers: BeforeComma, \
 BreakStringLiterals: true, \
 \
-CompactNamespaces: true, \
+CompactNamespaces: false, \
 ConstructorInitializerAllOnOneLineOrOnePerLine: false, \
 ConstructorInitializerIndentWidth: 2, \
 ContinuationIndentWidth: 2, \
@@ -69,7 +69,7 @@ IndentWidth: 2, \
 IndentWrappedFunctionNames: false, \
 KeepEmptyLinesAtTheStartOfBlocks: false, \
 MaxEmptyLinesToKeep: 1, \
-NamespaceIndentation: Inner, \
+NamespaceIndentation: None, \
 \
 PointerAlignment: Left, \
 ReflowComments: true, \
