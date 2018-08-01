@@ -8,4 +8,5 @@ fi
 line1=$1
 line2=$2
 filename=$3
-sed -n "$line1,$line2"p $filename
+stop=$(expr $line2 + 1)
+sed -n "${stop}q;$line1,$line2"p $filename
