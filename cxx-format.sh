@@ -2,16 +2,16 @@
 
 _config1="{ \
 BasedOnStyle: WebKit, \
-ColumnLimit: 80, \
+ColumnLimit: 120, \
 Language: Cpp, \
 Standard: Cpp11, \
 TabWidth: 8, \
 UseTab: Never, \
 \
-AccessModifierOffset: -2, \
+AccessModifierOffset: -4, \
 AlignAfterOpenBracket: DontAlign, \
-AlignConsecutiveAssignments: false, \
-AlignConsecutiveDeclarations: false, \
+AlignConsecutiveAssignments: true, \
+AlignConsecutiveDeclarations: true, \
 AlignEscapedNewlines: Left, \
 AlignOperands: false, \
 AlignTrailingComments: true, \
@@ -55,8 +55,8 @@ BreakStringLiterals: true, \
 \
 CompactNamespaces: false, \
 ConstructorInitializerAllOnOneLineOrOnePerLine: false, \
-ConstructorInitializerIndentWidth: 2, \
-ContinuationIndentWidth: 2, \
+ConstructorInitializerIndentWidth: 4, \
+ContinuationIndentWidth: 4, \
 Cpp11BracedListStyle: true, \
 \
 DerivePointerAlignment: false, \
@@ -65,7 +65,7 @@ IncludeBlocks: Preserve, \
 \
 IndentCaseLabels: false, \
 IndentPPDirectives: AfterHash, \
-IndentWidth: 2, \
+IndentWidth: 4, \
 IndentWrappedFunctionNames: false, \
 KeepEmptyLinesAtTheStartOfBlocks: false, \
 MaxEmptyLinesToKeep: 1, \
