@@ -35,7 +35,7 @@ BraceWrapping: { \
   AfterClass: false, \
   AfterControlStatement: false, \
   AfterEnum: false, \
-  AfterFunction: true, \
+  AfterFunction: false, \
   AfterNamespace: false, \
   AfterStruct: false, \
   AfterUnion: false, \
