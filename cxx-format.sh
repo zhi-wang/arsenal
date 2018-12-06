@@ -2,13 +2,13 @@
 
 _config1="{ \
 BasedOnStyle: WebKit, \
-ColumnLimit: 120, \
+ColumnLimit: 80, \
 Language: Cpp, \
 Standard: Cpp11, \
 TabWidth: 8, \
 UseTab: Never, \
 \
-AccessModifierOffset: -4, \
+AccessModifierOffset: -3, \
 AlignAfterOpenBracket: DontAlign, \
 AlignConsecutiveAssignments: true, \
 AlignConsecutiveDeclarations: true, \
@@ -22,7 +22,7 @@ BinPackParameters: true, \
 \
 AllowShortBlocksOnASingleLine: true, \
 AllowShortCaseLabelsOnASingleLine: false, \
-AllowShortFunctionsOnASingleLine: Empty, \
+AllowShortFunctionsOnASingleLine: Inline, \
 AllowShortIfStatementsOnASingleLine: false, \
 AllowShortLoopsOnASingleLine: false, \
 \
@@ -55,8 +55,8 @@ BreakStringLiterals: true, \
 \
 CompactNamespaces: false, \
 ConstructorInitializerAllOnOneLineOrOnePerLine: false, \
-ConstructorInitializerIndentWidth: 4, \
-ContinuationIndentWidth: 4, \
+ConstructorInitializerIndentWidth: 3, \
+ContinuationIndentWidth: 3, \
 Cpp11BracedListStyle: true, \
 \
 DerivePointerAlignment: false, \
@@ -65,13 +65,13 @@ IncludeBlocks: Preserve, \
 \
 IndentCaseLabels: false, \
 IndentPPDirectives: AfterHash, \
-IndentWidth: 4, \
+IndentWidth: 3, \
 IndentWrappedFunctionNames: false, \
 KeepEmptyLinesAtTheStartOfBlocks: false, \
 MaxEmptyLinesToKeep: 1, \
 NamespaceIndentation: None, \
 \
-PointerAlignment: Left, \
+PointerAlignment: Right, \
 ReflowComments: true, \
 SortIncludes: true, \
 SortUsingDeclarations: true, \
