@@ -71,7 +71,7 @@ KeepEmptyLinesAtTheStartOfBlocks: false, \
 MaxEmptyLinesToKeep: 1, \
 NamespaceIndentation: None, \
 \
-PointerAlignment: Right, \
+PointerAlignment: Left, \
 ReflowComments: true, \
 SortIncludes: true, \
 SortUsingDeclarations: true, \
