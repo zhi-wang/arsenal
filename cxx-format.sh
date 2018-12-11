@@ -10,8 +10,8 @@ UseTab: Never, \
 \
 AccessModifierOffset: -3, \
 AlignAfterOpenBracket: DontAlign, \
-AlignConsecutiveAssignments: true, \
-AlignConsecutiveDeclarations: true, \
+AlignConsecutiveAssignments: false, \
+AlignConsecutiveDeclarations: false, \
 AlignEscapedNewlines: Left, \
 AlignOperands: false, \
 AlignTrailingComments: true, \
