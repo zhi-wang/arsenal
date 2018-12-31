@@ -89,7 +89,9 @@ SpacesInParentheses: false, \
 SpacesInSquareBrackets: false \
 }"
 
-if [ ! -z $(which clang-format-6.0) ]; then
+if [ ! -z $(which clang-format-7.0) ]; then
+  _prog=$(which clang-format-7.0)
+elif [ ! -z $(which clang-format-6.0) ]; then
   _prog=$(which clang-format-6.0)
 elif [ ! -z $(which clang-format) ]; then
   _prog=$(which clang-format)
