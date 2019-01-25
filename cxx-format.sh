@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 _config1="{ \
 BasedOnStyle: WebKit, \
@@ -89,23 +90,8 @@ SpacesInParentheses: false, \
 SpacesInSquareBrackets: false \
 }"
 
-if [ ! -z $(which clang-format-7.0) ]; then
-  _prog=$(which clang-format-7.0)
-elif [ ! -z $(which clang-format-6.0) ]; then
-  _prog=$(which clang-format-6.0)
-elif [ ! -z $(which clang-format) ]; then
-  _prog=$(which clang-format)
-else
-  echo clang-format not found!
-  exit
-fi
-
-_version=$($_prog -version | awk '{print $3}') # e.g. 6.0.0
-_version="${_version%%.*}" # 6.0.0 -> 6
-if [ $_version -lt 6 ]; then
-  echo Must use clang-format version 6.0.0+
-  exit
-fi
+_dir_of_sh_from_within=$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)
+_prog=$(bash $_dir_of_sh_from_within/_find-clang-format.sh)
 
 if [ "$#" -gt 0 ]; then
   echo format source files
