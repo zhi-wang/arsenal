@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-_config1="                                        {\
+_config1="{                                        \
 BasedOnStyle:                 LLVM                ,\
 AlignOperands:                false               ,\
 PointerAlignment:             Left                ,\
