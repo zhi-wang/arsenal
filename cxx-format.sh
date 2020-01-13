@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+
 _config1="{                                        \
 BasedOnStyle:                 LLVM                ,\
 AlignOperands:                false               ,\
@@ -9,8 +10,10 @@ IndentPPDirectives:           AfterHash           ,\
 ColumnLimit:                  80                  ,\
 FixNamespaceComments:         false               }"
 
+
 _dir_of_sh_from_within=$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)
 _prog=$(bash $_dir_of_sh_from_within/_find-clang-format.sh)
+
 
 if [ "$#" -gt 0 ]; then
   echo format source files

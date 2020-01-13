@@ -1,9 +1,11 @@
 #!/bin/bash
 
+
 if [ "$#" -lt 3 ]; then
   echo Usage: CMD line1 line2 filename
   exit
 fi
+
 
 line1=$1
 line2=$2

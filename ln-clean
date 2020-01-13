@@ -1,3 +1,4 @@
 #!/bin/bash
 
+
 find -L . -type l -exec rm -- {} +
