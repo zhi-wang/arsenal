@@ -24,5 +24,5 @@ for x in $@; do
 
 
 	# Replace "// *#prag " by "#pragma "
-	$_sed -i -pe 's/\/\/ *#prag /#pragma /g' $x
+	$_sed 's/\/\/ *#prag /#pragma /g' $x
 done
