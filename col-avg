@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+
+
+import getopt
+import pathlib
+import sys
+
+
+def usage():
+    exe = pathlib.Path(sys.argv[0]).stem
+    msg = '''NAME
+       {0} - averaging a column in file
+
+SYNOPSIS
+       {0} [OPTION]... [FILE]
+
+DESCRIPTION
+
+       -k
+              column number starting from 1
+
+       -p
+              decimal place value; default is 6'''.format(exe)
+    print(msg)
+    sys.exit()
+
+
+def get_args():
+    args = sys.argv[1:]
+    argdef = 'k:p:'
+    optlist, args = getopt.getopt(args, argdef)
+    col = 0
+    prec = 6
+    f = ''
+    if len(args):
+        f = args[0]
+    for o, a in optlist:
+        if o == '-k':
+            col = int(a) - 1
+        elif o == '-p':
+            prec = int(a)
+    if col < 0 or f == '':
+        usage()
+    return col, prec, f
+
+
+def col_avg(col, prec, f):
+    lst = []
+    for line in open(f):
+        vs = line.strip().split()
+        if len(vs):
+            val = float(vs[col])
+            lst.append(val)
+    tot = sum(lst)
+    avg = tot / len(lst)
+    fmt = '{1:.{0}f}'
+    print(fmt.format(prec, avg))
+
+
+if __name__ == '__main__':
+    col_avg(*get_args())
