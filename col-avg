@@ -53,10 +53,16 @@ def col_avg(col, prec, f):
             lst.append(val)
     tot = sum(lst)
     avg = tot / len(lst)
+    sig = 0.0
+    for l in lst:
+        sig += (avg - l)**2
+    sig /= (len(lst) - 1)
+    sig = sig**0.5
     fmt = ' {2:3s} {1:.{0}f}'
     print(' {1:3s} {0:d}'.format(len(lst), 'len'))
     print(fmt.format(prec, tot, 'sum'))
     print(fmt.format(prec, avg, 'avg'))
+    print(fmt.format(prec, sig, 'std'))
 
 
 if __name__ == '__main__':
