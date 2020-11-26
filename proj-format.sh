@@ -14,15 +14,15 @@ elif [ $_os == Darwin ]; then
 fi
 
 
-for x in $@; do
+for x in "$@"; do
 	# Replace "#pragma " by "//#prag "
-	$_sed 's/#pragma /\/\/#prag /g' $x
+	$_sed 's/#pragma /\/\/#prag /g' "$x"
 
 
 	# Do format
-	$_prog -i -style=file $x
+	$_prog -i -style=file "$x"
 
 
 	# Replace "// *#prag " by "#pragma "
-	$_sed -i -pe 's/\/\/ *#prag /#pragma /g' $x
+	$_sed 's/\/\/ *#prag /#pragma /g' "$x"
 done

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-if [ ! -z $(which clang-format-10.0) ]; then
-  _prog=$(which clang-format-10.0)
+if [ ! -z $(which clang-format-10) ]; then
+  _prog=$(which clang-format-10)
 elif [ ! -z $(which clang-format) ]; then
   _prog=$(which clang-format)
 else
@@ -18,7 +18,7 @@ _version=$($_prog --version)
 _version="${_version##*clang-format version}"
 _version="${_version%%.*}"
 if [ $_version -lt 10 ]; then
-  echo Must use clang-format version 10.0.0+
+  echo Must use clang-format version 10+
   exit 1
 fi
 
