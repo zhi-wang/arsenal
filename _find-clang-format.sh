@@ -12,9 +12,10 @@ fi
 
 
 # clang-format version 6.0.0 (tags/RELEASE_600/final)
-# -> 6.0.0
+# -> 6.0.0 (tags/RELEASE_600/final)
 # -> 6
-_version=$($_prog -version | awk '{print $3}')
+_version=$($_prog --version)
+_version="${_version##*clang-format version}"
 _version="${_version%%.*}"
 if [ $_version -lt 10 ]; then
   echo Must use clang-format version 10.0.0+
