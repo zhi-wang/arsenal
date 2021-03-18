@@ -48,7 +48,7 @@ def col_avg(col, prec, f):
     lst = []
     for line in open(f):
         vs = line.strip().split()
-        if len(vs):
+        if len(vs) and line[0] != '#':
             val = float(vs[col])
             lst.append(val)
     tot = sum(lst)
