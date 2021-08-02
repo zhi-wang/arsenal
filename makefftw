@@ -1,0 +1,29 @@
+#!/bin/bash
+
+VER=3.3.9
+PREF=$HOME/local/fftw
+
+echo VERSION $VER
+echo PREFIX $PREF
+echo exit now
+exit
+
+mkdir -p build-fftw
+cd build-fftw
+wget http://www.fftw.org/fftw-3.3.9.tar.gz
+
+# build double precision
+tar xvf fftw-$VER.tar.gz
+mv fftw-$VER src-double
+cd src-double
+./configure --prefix=$PREF --enable-openmp --enable-threads
+make install
+cd ..
+
+# build single precision
+tar xvf fftw-$VER.tar.gz
+mv fftw-$VER src-single
+cd src-single
+./configure --prefix=$PREF --enable-openmp --enable-threads --enable-single
+make install
+cd ..
