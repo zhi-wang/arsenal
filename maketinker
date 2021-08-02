@@ -1,0 +1,34 @@
+#!/bin/bash
+
+SRC=$HOME/tinker-github
+DST=$HOME/tinker
+BIN=$HOME/local/bin
+FFTW=$HOME/local/fftw
+
+echo SRC  $SRC
+echo DST  $DST
+echo BIN  $BIN
+echo FFTW $FFTW
+echo exit now
+exit
+
+cp -r $SRC/params $DST
+
+mkdir -p $DST/source
+cd $DST/source
+
+cp $SRC/source/*.f $DST/source
+cp $SRC/linux/gfortran/compile.make $DST/source
+./compile.make
+
+cp $SRC/linux/gfortran/library.make $DST/source
+cp $SRC/linux/gfortran/link.make $DST/source
+cp $FFTW/lib/libfftw3.a .
+cp $FFTW/lib/libfftw3_threads.a .
+./library.make
+./link.make
+
+for x in $DST/source/*.x; do
+  y=`basename $x .x`
+  ln -s $x $BIN/$y
+done
