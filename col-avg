@@ -39,14 +39,18 @@ def get_args():
             col = int(a) - 1
         elif o == '-p':
             prec = int(a)
-    if col < 0 or f == '':
+    if col < 0:
         usage()
     return col, prec, f
 
 
 def col_avg(col, prec, f):
     lst = []
-    for line in open(f):
+    if f == '':
+        fptr = sys.stdin
+    else:
+        fptr = open(f)
+    for line in fptr:
         vs = line.strip().split()
         if len(vs) and line[0] != '#':
             val = float(vs[col])
